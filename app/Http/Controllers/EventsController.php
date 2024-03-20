@@ -8,13 +8,6 @@ use Illuminate\Http\Request;
 
 class EventsController extends Controller
 {
-    public function index()
-    {
-        $events = Events::all();
-        return response()->json([
-            'data' => $events
-        ]);
-    }
 
     public function get(): View
     {
