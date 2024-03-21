@@ -16,6 +16,12 @@
                     <i class="align-middle" data-feather="table"></i> <span class="align-middle">Events</span>
                 </a>
             </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{url('frontend')}}">
+                    <i class="align-middle" data-feather="table"></i> <span class="align-middle">Frontend</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

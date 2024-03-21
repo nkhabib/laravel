@@ -24,6 +24,8 @@ Route::controller(EventsController::class)->group(function () {
     Route::put('updateEvent{id}', 'doUpdate');
     Route::post('search', 'search');
     Route::get('search', 'search');
+    // frontend
+    Route::get('frontend', 'front_get');
 });
 
 // Route::controller(ApiEventsController::class)->group(function () {

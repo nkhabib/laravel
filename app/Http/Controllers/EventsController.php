@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Events;
+use GuzzleHttp\Client;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class EventsController extends Controller
 {
@@ -113,5 +115,18 @@ class EventsController extends Controller
         ];
 
         return view('welcome', $data);
+    }
+
+    public function front_get(Request $request)
+    {
+        $response = Http::get('https://jakarta-tourism.go.id/api/event');
+        $events = $response->json();
+        $data = [
+            'title' => 'Front End',
+            'page' => 'Front End',
+            'events' => $events,
+        ];
+
+        return view('frontend', $data);
     }
 }
